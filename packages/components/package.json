@@ -1,6 +1,15 @@
 {
   "name": "@dzhosts/components",
   "version": "0.1.0",
+  "description": "Reusable Lit web components for DZHosts applications.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmhobbs/dzhosts-ui.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "files": [
     "dist"
