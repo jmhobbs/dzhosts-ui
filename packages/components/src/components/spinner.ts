@@ -1,12 +1,12 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
+import { LitElement, css, html } from "lit";
 
-import { hostStyles } from '../internal/styles';
+import { hostStyles } from "../internal/styles";
 
 export class DztSpinner extends LitElement {
   static properties = {
-    size: { reflect: true }
+    size: { reflect: true },
   };
 
   static styles = [
@@ -25,11 +25,11 @@ export class DztSpinner extends LitElement {
         width: var(--spinner-size);
       }
 
-      :host([size='sm']) .spinner {
+      :host([size="sm"]) .spinner {
         --spinner-size: 0.875rem;
       }
 
-      :host([size='md']) .spinner {
+      :host([size="md"]) .spinner {
         --spinner-size: 1.25rem;
       }
 
@@ -44,16 +44,16 @@ export class DztSpinner extends LitElement {
           transform: rotate(360deg);
         }
       }
-    `
+    `,
   ];
 
-  size = 'md';
+  size = "md";
 
   render() {
     return html`<span class="spinner" part="base" aria-label="Loading" role="status"></span>`;
   }
 }
 
-if (!customElements.get('dzt-spinner')) {
-  customElements.define('dzt-spinner', DztSpinner);
+if (!customElements.get("dzt-spinner")) {
+  customElements.define("dzt-spinner", DztSpinner);
 }

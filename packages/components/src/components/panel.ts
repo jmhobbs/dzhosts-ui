@@ -1,13 +1,13 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
-import { styleMap } from 'lit/directives/style-map.js';
+import { LitElement, css, html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 
-import { hostStyles, resolveSpace, surfaceStyles } from '../internal/styles';
+import { hostStyles, resolveSpace, surfaceStyles } from "../internal/styles";
 
 export class DztPanel extends LitElement {
   static properties = {
-    padding: { type: String }
+    padding: { type: String },
   };
 
   static styles = [
@@ -17,20 +17,24 @@ export class DztPanel extends LitElement {
       .surface {
         padding: var(--panel-padding);
       }
-    `
+    `,
   ];
 
-  padding = '4';
+  padding = "4";
 
   render() {
     return html`
-      <div class="surface" part="base" style=${styleMap({ '--panel-padding': resolveSpace(this.padding) })}>
+      <div
+        class="surface"
+        part="base"
+        style=${styleMap({ "--panel-padding": resolveSpace(this.padding) })}
+      >
         <slot></slot>
       </div>
     `;
   }
 }
 
-if (!customElements.get('dzt-panel')) {
-  customElements.define('dzt-panel', DztPanel);
+if (!customElements.get("dzt-panel")) {
+  customElements.define("dzt-panel", DztPanel);
 }

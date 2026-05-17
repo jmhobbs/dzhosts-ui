@@ -1,15 +1,15 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
-import { styleMap } from 'lit/directives/style-map.js';
+import { LitElement, css, html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 
-import { hostStyles, resolveSpace } from '../internal/styles';
+import { hostStyles, resolveSpace } from "../internal/styles";
 
 export class DztStack extends LitElement {
   static properties = {
     gap: { type: String },
     align: { type: String },
-    justify: { type: String }
+    justify: { type: String },
   };
 
   static styles = [
@@ -26,14 +26,14 @@ export class DztStack extends LitElement {
         gap: var(--gap);
         justify-content: var(--justify);
       }
-    `
+    `,
   ];
 
-  gap = '4';
+  gap = "4";
 
-  align = 'stretch';
+  align = "stretch";
 
-  justify = 'flex-start';
+  justify = "flex-start";
 
   render() {
     return html`
@@ -41,9 +41,9 @@ export class DztStack extends LitElement {
         class="stack"
         part="base"
         style=${styleMap({
-          '--gap': resolveSpace(this.gap),
-          '--align': this.align,
-          '--justify': this.justify
+          "--gap": resolveSpace(this.gap),
+          "--align": this.align,
+          "--justify": this.justify,
         })}
       >
         <slot></slot>
@@ -52,6 +52,6 @@ export class DztStack extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-stack')) {
-  customElements.define('dzt-stack', DztStack);
+if (!customElements.get("dzt-stack")) {
+  customElements.define("dzt-stack", DztStack);
 }

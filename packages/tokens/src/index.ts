@@ -70,8 +70,8 @@ export function installTokens(target: Document = document): void {
     return;
   }
 
-  const styleElement = target.createElement('style');
-  styleElement.dataset.dztTokens = 'true';
+  const styleElement = target.createElement("style");
+  styleElement.dataset.dztTokens = "true";
   styleElement.textContent = tokensCssText;
   target.head.append(styleElement);
 }

@@ -1,14 +1,14 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
+import { LitElement, css, html } from "lit";
 
-import { fieldTextStyles, hostStyles } from '../internal/styles';
+import { fieldTextStyles, hostStyles } from "../internal/styles";
 
 export class DztField extends LitElement {
   static properties = {
     label: { type: String },
     hint: { type: String },
-    error: { type: String }
+    error: { type: String },
   };
 
   static styles = [
@@ -22,14 +22,14 @@ export class DztField extends LitElement {
       .field {
         display: grid;
       }
-    `
+    `,
   ];
 
-  label = '';
+  label = "";
 
-  hint = '';
+  hint = "";
 
-  error = '';
+  error = "";
 
   render() {
     return html`
@@ -46,6 +46,6 @@ export class DztField extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-field')) {
-  customElements.define('dzt-field', DztField);
+if (!customElements.get("dzt-field")) {
+  customElements.define("dzt-field", DztField);
 }

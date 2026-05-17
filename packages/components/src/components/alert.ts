@@ -1,13 +1,13 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
+import { LitElement, css, html } from "lit";
 
-import { hostStyles } from '../internal/styles';
+import { hostStyles } from "../internal/styles";
 
 export class DztAlert extends LitElement {
   static properties = {
     tone: { reflect: true },
-    title: { type: String }
+    title: { type: String },
   };
 
   static styles = [
@@ -28,25 +28,25 @@ export class DztAlert extends LitElement {
         padding: var(--dzt-space-4);
       }
 
-      :host([tone='info']) .alert {
+      :host([tone="info"]) .alert {
         background: var(--dzt-color-bg-info-muted);
         border-color: var(--dzt-color-border-info);
         color: var(--dzt-color-text-info);
       }
 
-      :host([tone='danger']) .alert {
+      :host([tone="danger"]) .alert {
         background: var(--dzt-color-bg-danger-muted);
         border-color: var(--dzt-color-border-danger);
         color: var(--dzt-color-text-danger);
       }
 
-      :host([tone='success']) .alert {
+      :host([tone="success"]) .alert {
         background: var(--dzt-color-bg-success-muted);
         border-color: var(--dzt-color-border-success);
         color: var(--dzt-color-text-success);
       }
 
-      :host([tone='warning']) .alert {
+      :host([tone="warning"]) .alert {
         background: var(--dzt-color-bg-warning-muted);
         color: var(--dzt-color-text-warning);
       }
@@ -59,12 +59,12 @@ export class DztAlert extends LitElement {
       .body {
         color: inherit;
       }
-    `
+    `,
   ];
 
-  tone = 'info';
+  tone = "info";
 
-  title = '';
+  title = "";
 
   render() {
     return html`
@@ -78,6 +78,6 @@ export class DztAlert extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-alert')) {
-  customElements.define('dzt-alert', DztAlert);
+if (!customElements.get("dzt-alert")) {
+  customElements.define("dzt-alert", DztAlert);
 }

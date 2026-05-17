@@ -1,13 +1,13 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
+import { LitElement, css, html } from "lit";
 
-import { hostStyles } from '../internal/styles';
+import { hostStyles } from "../internal/styles";
 
 export class DztEmptyState extends LitElement {
   static properties = {
     title: { type: String },
-    description: { type: String }
+    description: { type: String },
   };
 
   static styles = [
@@ -38,24 +38,26 @@ export class DztEmptyState extends LitElement {
       .description {
         max-width: 32rem;
       }
-    `
+    `,
   ];
 
-  title = '';
+  title = "";
 
-  description = '';
+  description = "";
 
   render() {
     return html`
       <div class="state" part="base">
         ${this.title ? html`<div class="title" part="title">${this.title}</div>` : null}
-        ${this.description ? html`<div class="description" part="description">${this.description}</div>` : null}
+        ${this.description
+          ? html`<div class="description" part="description">${this.description}</div>`
+          : null}
         <slot></slot>
       </div>
     `;
   }
 }
 
-if (!customElements.get('dzt-empty-state')) {
-  customElements.define('dzt-empty-state', DztEmptyState);
+if (!customElements.get("dzt-empty-state")) {
+  customElements.define("dzt-empty-state", DztEmptyState);
 }

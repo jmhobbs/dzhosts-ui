@@ -1,8 +1,8 @@
-import '@dzhosts/components';
-import { html } from 'lit';
+import "@dzhosts/components";
+import { html } from "lit";
 
 const meta = {
-  title: 'Inputs/Textarea'
+  title: "Inputs/Textarea",
 };
 
 export default meta;
@@ -14,7 +14,7 @@ export const Placeholder = {
       hint="Keep the note short and useful."
       placeholder="Describe what this workspace is for."
     ></dzt-textarea>
-  `
+  `,
 };
 
 export const Filled = {
@@ -24,7 +24,7 @@ export const Filled = {
       hint="Keep the note short and useful."
       value="Shared workspace for local tooling experiments."
     ></dzt-textarea>
-  `
+  `,
 };
 
 export const Invalid = {
@@ -35,7 +35,7 @@ export const Invalid = {
       label="Description"
       placeholder="Describe what this workspace is for."
     ></dzt-textarea>
-  `
+  `,
 };
 
 export const Disabled = {
@@ -46,5 +46,5 @@ export const Disabled = {
       hint="This field is managed by the selected profile."
       value="Shared workspace for local tooling experiments."
     ></dzt-textarea>
-  `
+  `,
 };

@@ -1,8 +1,8 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
+import { LitElement, css, html } from "lit";
 
-import { buttonResetStyles, fieldTextStyles, hostStyles } from '../internal/styles';
+import { buttonResetStyles, fieldTextStyles, hostStyles } from "../internal/styles";
 
 export class DztCheckbox extends LitElement {
   static properties = {
@@ -10,7 +10,7 @@ export class DztCheckbox extends LitElement {
     disabled: { type: Boolean, reflect: true },
     invalid: { type: Boolean, reflect: true },
     label: { type: String },
-    hint: { type: String }
+    hint: { type: String },
   };
 
   static styles = [
@@ -55,7 +55,7 @@ export class DztCheckbox extends LitElement {
         color: var(--dzt-color-text-primary);
         font-size: var(--dzt-font-size-300);
       }
-    `
+    `,
   ];
 
   checked = false;
@@ -64,18 +64,18 @@ export class DztCheckbox extends LitElement {
 
   invalid = false;
 
-  label = '';
+  label = "";
 
-  hint = '';
+  hint = "";
 
   private handleChange(event: Event) {
     const target = event.currentTarget as HTMLInputElement;
     this.checked = target.checked;
     this.dispatchEvent(
-      new Event('change', {
+      new Event("change", {
         bubbles: true,
-        composed: true
-      })
+        composed: true,
+      }),
     );
   }
 
@@ -83,7 +83,7 @@ export class DztCheckbox extends LitElement {
     return html`
       <label part="base">
         <input
-          aria-invalid=${this.invalid ? 'true' : 'false'}
+          aria-invalid=${this.invalid ? "true" : "false"}
           ?checked=${this.checked}
           ?disabled=${this.disabled}
           type="checkbox"
@@ -98,6 +98,6 @@ export class DztCheckbox extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-checkbox')) {
-  customElements.define('dzt-checkbox', DztCheckbox);
+if (!customElements.get("dzt-checkbox")) {
+  customElements.define("dzt-checkbox", DztCheckbox);
 }

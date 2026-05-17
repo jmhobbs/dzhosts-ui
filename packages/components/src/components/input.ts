@@ -1,10 +1,10 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
-import { ifDefined } from 'lit/directives/if-defined.js';
+import { LitElement, css, html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
-import { buttonResetStyles, controlStyles, hostStyles } from '../internal/styles';
-import './field';
+import { buttonResetStyles, controlStyles, hostStyles } from "../internal/styles";
+import "./field";
 
 export class DztInput extends LitElement {
   static properties = {
@@ -16,7 +16,7 @@ export class DztInput extends LitElement {
     type: { type: String },
     disabled: { type: Boolean, reflect: true },
     invalid: { type: Boolean, reflect: true },
-    value: { type: String }
+    value: { type: String },
   };
 
   static styles = [
@@ -27,34 +27,34 @@ export class DztInput extends LitElement {
       :host {
         display: block;
       }
-    `
+    `,
   ];
 
-  label = '';
+  label = "";
 
-  hint = '';
+  hint = "";
 
-  error = '';
+  error = "";
 
-  name = '';
+  name = "";
 
-  placeholder = '';
+  placeholder = "";
 
-  type = 'text';
+  type = "text";
 
   disabled = false;
 
   invalid = false;
 
-  value = '';
+  value = "";
 
-  private emit(type: 'input' | 'change', value: string) {
+  private emit(type: "input" | "change", value: string) {
     this.value = value;
     this.dispatchEvent(
       new Event(type, {
         bubbles: true,
-        composed: true
-      })
+        composed: true,
+      }),
     );
   }
 
@@ -63,20 +63,22 @@ export class DztInput extends LitElement {
       <dzt-field .label=${this.label} .hint=${this.hint} .error=${this.error}>
         <input
           class="control"
-          aria-invalid=${this.invalid ? 'true' : 'false'}
+          aria-invalid=${this.invalid ? "true" : "false"}
           ?disabled=${this.disabled}
           name=${ifDefined(this.name || undefined)}
           placeholder=${ifDefined(this.placeholder || undefined)}
           type=${this.type}
           .value=${this.value}
-          @input=${(event: Event) => this.emit('input', (event.currentTarget as HTMLInputElement).value)}
-          @change=${(event: Event) => this.emit('change', (event.currentTarget as HTMLInputElement).value)}
+          @input=${(event: Event) =>
+            this.emit("input", (event.currentTarget as HTMLInputElement).value)}
+          @change=${(event: Event) =>
+            this.emit("change", (event.currentTarget as HTMLInputElement).value)}
         />
       </dzt-field>
     `;
   }
 }
 
-if (!customElements.get('dzt-input')) {
-  customElements.define('dzt-input', DztInput);
+if (!customElements.get("dzt-input")) {
+  customElements.define("dzt-input", DztInput);
 }

@@ -1,8 +1,8 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
+import { LitElement, css, html } from "lit";
 
-import { hostStyles } from '../internal/styles';
+import { hostStyles } from "../internal/styles";
 
 export class DztDivider extends LitElement {
   static styles = [
@@ -17,7 +17,7 @@ export class DztDivider extends LitElement {
         border-top: 1px solid var(--dzt-color-border-default);
         margin: 0;
       }
-    `
+    `,
   ];
 
   render() {
@@ -25,7 +25,6 @@ export class DztDivider extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-divider')) {
-  customElements.define('dzt-divider', DztDivider);
+if (!customElements.get("dzt-divider")) {
+  customElements.define("dzt-divider", DztDivider);
 }
-

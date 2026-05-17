@@ -1,12 +1,12 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
+import { LitElement, css, html } from "lit";
 
-import { hostStyles } from '../internal/styles';
+import { hostStyles } from "../internal/styles";
 
 export class DztBadge extends LitElement {
   static properties = {
-    tone: { reflect: true }
+    tone: { reflect: true },
   };
 
   static styles = [
@@ -32,26 +32,26 @@ export class DztBadge extends LitElement {
         text-transform: uppercase;
       }
 
-      :host([tone='info']) .badge {
+      :host([tone="info"]) .badge {
         background: var(--dzt-color-bg-accent-muted);
         border-color: var(--dzt-color-border-accent);
         color: var(--dzt-color-text-accent);
       }
 
-      :host([tone='danger']) .badge {
+      :host([tone="danger"]) .badge {
         background: var(--dzt-color-bg-danger-muted);
         border-color: var(--dzt-color-border-danger);
         color: var(--dzt-color-text-danger);
       }
 
-      :host([tone='success']) .badge {
+      :host([tone="success"]) .badge {
         background: var(--dzt-color-bg-success-muted);
         color: var(--dzt-color-text-success);
       }
-    `
+    `,
   ];
 
-  tone = 'neutral';
+  tone = "neutral";
 
   render() {
     return html`
@@ -62,6 +62,6 @@ export class DztBadge extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-badge')) {
-  customElements.define('dzt-badge', DztBadge);
+if (!customElements.get("dzt-badge")) {
+  customElements.define("dzt-badge", DztBadge);
 }

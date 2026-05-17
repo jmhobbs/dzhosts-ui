@@ -1,8 +1,8 @@
-import '@dzhosts/components';
-import { html } from 'lit';
+import "@dzhosts/components";
+import { html } from "lit";
 
 const meta = {
-  title: 'Layout/Panel'
+  title: "Layout/Panel",
 };
 
 export default meta;
@@ -12,7 +12,7 @@ export const DefaultPadding = {
     <dzt-panel>
       <div>Primary panel content for tool configuration.</div>
     </dzt-panel>
-  `
+  `,
 };
 
 export const CompactPadding = {
@@ -20,5 +20,5 @@ export const CompactPadding = {
     <dzt-panel padding="2">
       <div>Secondary panel content with compact spacing.</div>
     </dzt-panel>
-  `
+  `,
 };

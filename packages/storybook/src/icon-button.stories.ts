@@ -1,16 +1,16 @@
-import '@dzhosts/components';
-import { html } from 'lit';
+import "@dzhosts/components";
+import { html } from "lit";
 
 const meta = {
-  title: 'Inputs/Icon Button'
+  title: "Inputs/Icon Button",
 };
 
 export default meta;
 
 export const Default = {
-  render: () => html`<dzt-icon-button label="Add command"></dzt-icon-button>`
+  render: () => html`<dzt-icon-button label="Add command"></dzt-icon-button>`,
 };
 
 export const Disabled = {
-  render: () => html`<dzt-icon-button disabled label="Add command"></dzt-icon-button>`
+  render: () => html`<dzt-icon-button disabled label="Add command"></dzt-icon-button>`,
 };

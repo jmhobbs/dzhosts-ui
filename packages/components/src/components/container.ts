@@ -1,13 +1,13 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
-import { styleMap } from 'lit/directives/style-map.js';
+import { LitElement, css, html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 
-import { hostStyles } from '../internal/styles';
+import { hostStyles } from "../internal/styles";
 
 export class DztContainer extends LitElement {
   static properties = {
-    width: { type: String }
+    width: { type: String },
   };
 
   static styles = [
@@ -21,20 +21,20 @@ export class DztContainer extends LitElement {
         margin-inline: auto;
         width: min(100%, var(--container-width));
       }
-    `
+    `,
   ];
 
-  width = '72rem';
+  width = "72rem";
 
   render() {
     return html`
-      <div class="container" part="base" style=${styleMap({ '--container-width': this.width })}>
+      <div class="container" part="base" style=${styleMap({ "--container-width": this.width })}>
         <slot></slot>
       </div>
     `;
   }
 }
 
-if (!customElements.get('dzt-container')) {
-  customElements.define('dzt-container', DztContainer);
+if (!customElements.get("dzt-container")) {
+  customElements.define("dzt-container", DztContainer);
 }

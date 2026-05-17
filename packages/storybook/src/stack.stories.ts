@@ -1,10 +1,11 @@
-import '@dzhosts/components';
-import { html } from 'lit';
+import "@dzhosts/components";
+import { html } from "lit";
 
-const itemStyles = 'background: var(--dzt-color-bg-subtle); border: 1px solid var(--dzt-color-border-default); border-radius: var(--dzt-radius-1); padding: var(--dzt-space-3);';
+const itemStyles =
+  "background: var(--dzt-color-bg-subtle); border: 1px solid var(--dzt-color-border-default); border-radius: var(--dzt-radius-1); padding: var(--dzt-space-3);";
 
 const meta = {
-  title: 'Layout/Stack'
+  title: "Layout/Stack",
 };
 
 export default meta;
@@ -16,7 +17,7 @@ export const DefaultSpacing = {
       <div style=${itemStyles}>Secondary content</div>
       <div style=${itemStyles}>Tertiary content</div>
     </dzt-stack>
-  `
+  `,
 };
 
 export const Centered = {
@@ -25,5 +26,5 @@ export const Centered = {
       <div style=${itemStyles}>Step one</div>
       <div style=${itemStyles}>Step two</div>
     </dzt-stack>
-  `
+  `,
 };

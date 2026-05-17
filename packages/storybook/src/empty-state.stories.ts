@@ -1,8 +1,8 @@
-import '@dzhosts/components';
-import { html } from 'lit';
+import "@dzhosts/components";
+import { html } from "lit";
 
 const meta = {
-  title: 'Feedback/Empty State'
+  title: "Feedback/Empty State",
 };
 
 export default meta;
@@ -13,7 +13,7 @@ export const DescriptionOnly = {
       title="No saved commands"
       description="Create your first command preset to speed up repeated local runs."
     ></dzt-empty-state>
-  `
+  `,
 };
 
 export const WithAction = {
@@ -24,5 +24,5 @@ export const WithAction = {
     >
       <button type="button">Create preset</button>
     </dzt-empty-state>
-  `
+  `,
 };

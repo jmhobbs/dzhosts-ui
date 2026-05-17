@@ -1,8 +1,8 @@
-import '@dzhosts/components';
-import { html } from 'lit';
+import "@dzhosts/components";
+import { html } from "lit";
 
 const meta = {
-  title: 'Layout/Divider'
+  title: "Layout/Divider",
 };
 
 export default meta;
@@ -14,5 +14,5 @@ export const Default = {
       <dzt-divider></dzt-divider>
       <div style="padding-top: var(--dzt-space-3);">Section two</div>
     </div>
-  `
+  `,
 };

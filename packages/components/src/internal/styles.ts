@@ -1,4 +1,4 @@
-import { css, type CSSResultGroup } from 'lit';
+import { css, type CSSResultGroup } from "lit";
 
 export const hostStyles = css`
   :host {
@@ -73,7 +73,9 @@ export const controlStyles = css`
     font: inherit;
     min-height: 2rem;
     padding: 0 var(--dzt-space-3);
-    transition: border-color var(--dzt-motion-fast), background var(--dzt-motion-fast);
+    transition:
+      border-color var(--dzt-motion-fast),
+      background var(--dzt-motion-fast);
     width: 100%;
   }
 
@@ -85,7 +87,7 @@ export const controlStyles = css`
     border-color: var(--dzt-color-border-strong);
   }
 
-  .control[aria-invalid='true'] {
+  .control[aria-invalid="true"] {
     border-color: var(--dzt-color-border-danger);
   }
 
@@ -96,12 +98,8 @@ export const controlStyles = css`
   }
 `;
 
-export const sharedStyles: CSSResultGroup = [
-  hostStyles,
-  buttonResetStyles
-];
+export const sharedStyles: CSSResultGroup = [hostStyles, buttonResetStyles];
 
 export function resolveSpace(value: string): string {
   return /^\d+$/.test(value) ? `var(--dzt-space-${value})` : value;
 }
-

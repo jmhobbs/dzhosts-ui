@@ -1,10 +1,10 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
-import { ifDefined } from 'lit/directives/if-defined.js';
+import { LitElement, css, html } from "lit";
+import { ifDefined } from "lit/directives/if-defined.js";
 
-import { buttonResetStyles, controlStyles, hostStyles } from '../internal/styles';
-import './field';
+import { buttonResetStyles, controlStyles, hostStyles } from "../internal/styles";
+import "./field";
 
 export class DztTextarea extends LitElement {
   static properties = {
@@ -15,7 +15,7 @@ export class DztTextarea extends LitElement {
     placeholder: { type: String },
     disabled: { type: Boolean, reflect: true },
     invalid: { type: Boolean, reflect: true },
-    value: { type: String }
+    value: { type: String },
   };
 
   static styles = [
@@ -32,42 +32,42 @@ export class DztTextarea extends LitElement {
         padding-block: var(--dzt-space-3);
         resize: vertical;
       }
-    `
+    `,
   ];
 
-  label = '';
+  label = "";
 
-  hint = '';
+  hint = "";
 
-  error = '';
+  error = "";
 
-  name = '';
+  name = "";
 
-  placeholder = '';
+  placeholder = "";
 
   disabled = false;
 
   invalid = false;
 
-  value = '';
+  value = "";
 
   render() {
     return html`
       <dzt-field .label=${this.label} .hint=${this.hint} .error=${this.error}>
         <textarea
           class="control"
-          aria-invalid=${this.invalid ? 'true' : 'false'}
+          aria-invalid=${this.invalid ? "true" : "false"}
           ?disabled=${this.disabled}
           name=${ifDefined(this.name || undefined)}
           placeholder=${ifDefined(this.placeholder || undefined)}
           .value=${this.value}
           @input=${(event: Event) => {
             this.value = (event.currentTarget as HTMLTextAreaElement).value;
-            this.dispatchEvent(new Event('input', { bubbles: true, composed: true }));
+            this.dispatchEvent(new Event("input", { bubbles: true, composed: true }));
           }}
           @change=${(event: Event) => {
             this.value = (event.currentTarget as HTMLTextAreaElement).value;
-            this.dispatchEvent(new Event('change', { bubbles: true, composed: true }));
+            this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
           }}
         ></textarea>
       </dzt-field>
@@ -75,6 +75,6 @@ export class DztTextarea extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-textarea')) {
-  customElements.define('dzt-textarea', DztTextarea);
+if (!customElements.get("dzt-textarea")) {
+  customElements.define("dzt-textarea", DztTextarea);
 }

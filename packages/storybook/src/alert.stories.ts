@@ -1,8 +1,8 @@
-import '@dzhosts/components';
-import { html } from 'lit';
+import "@dzhosts/components";
+import { html } from "lit";
 
 const meta = {
-  title: 'Feedback/Alert'
+  title: "Feedback/Alert",
 };
 
 export default meta;
@@ -12,7 +12,7 @@ export const Info = {
     <dzt-alert tone="info" title="Sync in progress">
       Pulling the latest component previews for local testing.
     </dzt-alert>
-  `
+  `,
 };
 
 export const Success = {
@@ -20,7 +20,7 @@ export const Success = {
     <dzt-alert tone="success" title="Deploy complete">
       The latest tool bundle was published and is ready for internal use.
     </dzt-alert>
-  `
+  `,
 };
 
 export const Warning = {
@@ -28,7 +28,7 @@ export const Warning = {
     <dzt-alert tone="warning" title="Attention needed">
       Review the generated preview before promoting it to the shared environment.
     </dzt-alert>
-  `
+  `,
 };
 
 export const Danger = {
@@ -36,5 +36,5 @@ export const Danger = {
     <dzt-alert tone="danger" title="Build failed">
       One or more stories did not compile after the last token update.
     </dzt-alert>
-  `
+  `,
 };

@@ -1,15 +1,15 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
-import { styleMap } from 'lit/directives/style-map.js';
+import { LitElement, css, html } from "lit";
+import { styleMap } from "lit/directives/style-map.js";
 
-import { hostStyles, resolveSpace } from '../internal/styles';
+import { hostStyles, resolveSpace } from "../internal/styles";
 
 export class DztInline extends LitElement {
   static properties = {
     gap: { type: String },
     align: { type: String },
-    justify: { type: String }
+    justify: { type: String },
   };
 
   static styles = [
@@ -27,14 +27,14 @@ export class DztInline extends LitElement {
         gap: var(--gap);
         justify-content: var(--justify);
       }
-    `
+    `,
   ];
 
-  gap = '3';
+  gap = "3";
 
-  align = 'center';
+  align = "center";
 
-  justify = 'flex-start';
+  justify = "flex-start";
 
   render() {
     return html`
@@ -42,9 +42,9 @@ export class DztInline extends LitElement {
         class="inline"
         part="base"
         style=${styleMap({
-          '--gap': resolveSpace(this.gap),
-          '--align': this.align,
-          '--justify': this.justify
+          "--gap": resolveSpace(this.gap),
+          "--align": this.align,
+          "--justify": this.justify,
         })}
       >
         <slot></slot>
@@ -53,6 +53,6 @@ export class DztInline extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-inline')) {
-  customElements.define('dzt-inline', DztInline);
+if (!customElements.get("dzt-inline")) {
+  customElements.define("dzt-inline", DztInline);
 }

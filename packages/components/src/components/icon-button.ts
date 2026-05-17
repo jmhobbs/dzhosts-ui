@@ -1,16 +1,16 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import plusIcon from 'iconoir/icons/regular/plus.svg?raw';
-import { LitElement, css, html, nothing } from 'lit';
-import { unsafeHTML } from 'lit/directives/unsafe-html.js';
+import plusIcon from "iconoir/icons/regular/plus.svg?raw";
+import { LitElement, css, html, nothing } from "lit";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
-import { buttonResetStyles, hostStyles } from '../internal/styles';
+import { buttonResetStyles, hostStyles } from "../internal/styles";
 
 export class DztIconButton extends LitElement {
   static properties = {
     disabled: { type: Boolean, reflect: true },
     label: { type: String },
-    useDefaultIcon: { type: Boolean }
+    useDefaultIcon: { type: Boolean },
   };
 
   static styles = [
@@ -55,23 +55,18 @@ export class DztIconButton extends LitElement {
         height: 100%;
         width: 100%;
       }
-    `
+    `,
   ];
 
   disabled = false;
 
-  label = 'Icon action';
+  label = "Icon action";
 
   useDefaultIcon = true;
 
   render() {
     return html`
-      <button
-        aria-label=${this.label}
-        part="base"
-        ?disabled=${this.disabled}
-        type="button"
-      >
+      <button aria-label=${this.label} part="base" ?disabled=${this.disabled} type="button">
         <slot>
           ${this.useDefaultIcon
             ? html`<span class="icon" part="icon">${unsafeHTML(plusIcon)}</span>`
@@ -82,6 +77,6 @@ export class DztIconButton extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-icon-button')) {
-  customElements.define('dzt-icon-button', DztIconButton);
+if (!customElements.get("dzt-icon-button")) {
+  customElements.define("dzt-icon-button", DztIconButton);
 }

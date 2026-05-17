@@ -1,13 +1,13 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html, type PropertyValues } from 'lit';
+import { LitElement, css, html, type PropertyValues } from "lit";
 
-import { buttonResetStyles, hostStyles } from '../internal/styles';
+import { buttonResetStyles, hostStyles } from "../internal/styles";
 
 export class DztDialog extends LitElement {
   static properties = {
     open: { type: Boolean, reflect: true },
-    headline: { type: String }
+    headline: { type: String },
   };
 
   static styles = [
@@ -69,33 +69,33 @@ export class DztDialog extends LitElement {
         justify-content: center;
         width: 2rem;
       }
-    `
+    `,
   ];
 
   open = false;
 
-  headline = '';
+  headline = "";
 
   updated(changedProperties: PropertyValues<this>) {
-    const dialogElement = this.renderRoot.querySelector('dialog');
+    const dialogElement = this.renderRoot.querySelector("dialog");
 
-    if (!changedProperties.has('open') || !dialogElement) {
+    if (!changedProperties.has("open") || !dialogElement) {
       return;
     }
 
     if (this.open) {
-      if ('showModal' in dialogElement && !dialogElement.open) {
+      if ("showModal" in dialogElement && !dialogElement.open) {
         dialogElement.showModal();
       } else {
-        dialogElement.setAttribute('open', '');
+        dialogElement.setAttribute("open", "");
       }
       return;
     }
 
-    if ('close' in dialogElement && dialogElement.open) {
+    if ("close" in dialogElement && dialogElement.open) {
       dialogElement.close();
     } else {
-      dialogElement.removeAttribute('open');
+      dialogElement.removeAttribute("open");
     }
   }
 
@@ -110,10 +110,10 @@ export class DztDialog extends LitElement {
   private handleClose() {
     this.open = false;
     this.dispatchEvent(
-      new Event('close', {
+      new Event("close", {
         bubbles: true,
-        composed: true
-      })
+        composed: true,
+      }),
     );
   }
 
@@ -137,6 +137,6 @@ export class DztDialog extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-dialog')) {
-  customElements.define('dzt-dialog', DztDialog);
+if (!customElements.get("dzt-dialog")) {
+  customElements.define("dzt-dialog", DztDialog);
 }

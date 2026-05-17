@@ -8,15 +8,9 @@
     "declarationMap": false,
     "noEmit": false,
     "paths": {
-      "@dzhosts/tokens": [
-        "../tokens/dist/index.d.ts"
-      ]
+      "@dzhosts/tokens": ["../tokens/dist/index.d.ts"]
     }
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "src/**/*.test.ts"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.test.ts"]
 }

@@ -1,8 +1,8 @@
-import '@dzhosts/components';
-import { html } from 'lit';
+import "@dzhosts/components";
+import { html } from "lit";
 
 const meta = {
-  title: 'Inputs/Input'
+  title: "Inputs/Input",
 };
 
 export default meta;
@@ -15,7 +15,7 @@ export const Filled = {
       placeholder="dzhosts-tools"
       value="dzhosts-tools"
     ></dzt-input>
-  `
+  `,
 };
 
 export const Placeholder = {
@@ -25,7 +25,7 @@ export const Placeholder = {
       hint="Used across command output and saved profiles."
       placeholder="dzhosts-tools"
     ></dzt-input>
-  `
+  `,
 };
 
 export const Invalid = {
@@ -36,7 +36,7 @@ export const Invalid = {
       label="Workspace name"
       placeholder="dzhosts-tools"
     ></dzt-input>
-  `
+  `,
 };
 
 export const Disabled = {
@@ -47,5 +47,5 @@ export const Disabled = {
       hint="This field is controlled by the selected profile."
       value="dzhosts-tools"
     ></dzt-input>
-  `
+  `,
 };

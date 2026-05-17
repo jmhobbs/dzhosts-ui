@@ -1,3 +1,3 @@
-import { installTokens } from '@dzhosts/tokens';
+import { installTokens } from "@dzhosts/tokens";
 
 installTokens();

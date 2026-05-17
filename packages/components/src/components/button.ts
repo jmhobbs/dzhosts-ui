@@ -1,14 +1,14 @@
-import '../internal/setup';
+import "../internal/setup";
 
-import { LitElement, css, html } from 'lit';
+import { LitElement, css, html } from "lit";
 
-import { buttonResetStyles, hostStyles } from '../internal/styles';
+import { buttonResetStyles, hostStyles } from "../internal/styles";
 
 export class DztButton extends LitElement {
   static properties = {
     variant: { reflect: true },
     disabled: { type: Boolean, reflect: true },
-    type: { type: String }
+    type: { type: String },
   };
 
   static styles = [
@@ -34,7 +34,10 @@ export class DztButton extends LitElement {
         min-height: 2rem;
         min-width: 2rem;
         padding: 0 var(--dzt-space-4);
-        transition: background var(--dzt-motion-fast), border-color var(--dzt-motion-fast), opacity var(--dzt-motion-fast);
+        transition:
+          background var(--dzt-motion-fast),
+          border-color var(--dzt-motion-fast),
+          opacity var(--dzt-motion-fast);
       }
 
       button:hover:enabled {
@@ -59,23 +62,18 @@ export class DztButton extends LitElement {
       .label {
         white-space: nowrap;
       }
-    `
+    `,
   ];
 
-  variant = 'solid';
+  variant = "solid";
 
   disabled = false;
 
-  type: 'button' | 'submit' | 'reset' = 'button';
+  type: "button" | "submit" | "reset" = "button";
 
   render() {
     return html`
-      <button
-        class=${this.variant}
-        part="base"
-        ?disabled=${this.disabled}
-        type=${this.type}
-      >
+      <button class=${this.variant} part="base" ?disabled=${this.disabled} type=${this.type}>
         <slot name="start"></slot>
         <span class="label" part="label"><slot></slot></span>
         <slot name="end"></slot>
@@ -84,6 +82,6 @@ export class DztButton extends LitElement {
   }
 }
 
-if (!customElements.get('dzt-button')) {
-  customElements.define('dzt-button', DztButton);
+if (!customElements.get("dzt-button")) {
+  customElements.define("dzt-button", DztButton);
 }

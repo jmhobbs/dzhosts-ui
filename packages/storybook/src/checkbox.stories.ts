@@ -1,8 +1,8 @@
-import '@dzhosts/components';
-import { html } from 'lit';
+import "@dzhosts/components";
+import { html } from "lit";
 
 const meta = {
-  title: 'Inputs/Checkbox'
+  title: "Inputs/Checkbox",
 };
 
 export default meta;
@@ -13,7 +13,7 @@ export const Unchecked = {
       label="Enable verbose logging"
       hint="Add extra output during local runs."
     ></dzt-checkbox>
-  `
+  `,
 };
 
 export const Checked = {
@@ -23,7 +23,7 @@ export const Checked = {
       label="Enable verbose logging"
       hint="Add extra output during local runs."
     ></dzt-checkbox>
-  `
+  `,
 };
 
 export const Disabled = {
@@ -33,7 +33,7 @@ export const Disabled = {
       label="Enable verbose logging"
       hint="Logging is managed by the current workspace."
     ></dzt-checkbox>
-  `
+  `,
 };
 
 export const Invalid = {
@@ -43,5 +43,5 @@ export const Invalid = {
       label="Accept deployment risk"
       hint="You must confirm before continuing."
     ></dzt-checkbox>
-  `
+  `,
 };
